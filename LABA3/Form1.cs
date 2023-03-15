@@ -190,8 +190,6 @@ namespace LABA3
             }
         }
 
-
-
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -201,23 +199,7 @@ namespace LABA3
                 e.SuppressKeyPress = true;
             }
         }
-
-
-        /*private double GetPreviousResult(int index)
-        {
-            if (_currentHistoryIndex < index)
-            {
-                throw new IndexOutOfRangeException("История результатов не содержит достаточного количества элементов.");
-            }
-
-            return _resultsHistory[_currentHistoryIndex - index];
-        }*/
-        
-        
-        
         //--------------------------------------------TASK 3------------------------------------------------------------------
-
-        
         private void textBox4_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -248,7 +230,6 @@ namespace LABA3
                 }
             }
         }
-        
         private void button3_Click(object sender, EventArgs e)
         {
             string t = textBox4.Text;
@@ -289,8 +270,6 @@ namespace LABA3
                 richTextBox1.Text += i + ". "+ _myCalc2.Res.ToString("0.000") + "\n";
                 textBox7.Text = _myCalc2.Res.ToString("0.000");
             }
-            
-            
         }
     }
 }
