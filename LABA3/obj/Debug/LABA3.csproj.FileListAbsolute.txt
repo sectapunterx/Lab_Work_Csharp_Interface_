@@ -1,0 +1,11 @@
+C:\Users\Fin\RiderProjects\LABA3\LABA3\bin\Debug\LABA3.exe.config
+C:\Users\Fin\RiderProjects\LABA3\LABA3\bin\Debug\LABA3.exe
+C:\Users\Fin\RiderProjects\LABA3\LABA3\bin\Debug\LABA3.pdb
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.csproj.AssemblyReference.cache
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.Properties.Resources.resources
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.csproj.GenerateResource.cache
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.csproj.CoreCompileInputs.cache
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.exe
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.pdb
+C:\Users\Fin\RiderProjects\LABA3\LABA3\obj\Debug\LABA3.Form1.resources
