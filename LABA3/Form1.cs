@@ -139,7 +139,7 @@ namespace LABA3
                 MessageBox.Show("Внимание! " + exception.Message);
             }
         }
-
+        
         private void UpdateHistory(double result, int a, double b)
         {
             // Очищаем поле с историей
@@ -151,12 +151,11 @@ namespace LABA3
             // Выводим записи из истории
             for (int i = 0; i < HistorySize; i++)
             {
-                int index = (_historyIndex + i) % HistorySize;
+                int index = i % HistorySize;
 
                 if (_history[index, 2] != 0)
                 {
-                    int lineNumber = (i + _historyIndex) % HistorySize + 1;
-                    string line = $"{lineNumber}\t{_history[index, 0]}\t{_history[index, 1]}\t{_history[index, 2]:0.000}";
+                    string line = $"{i + 1}\t{_history[index, 0]}\t{_history[index, 1]}\t{_history[index, 2]:0.000}";
                     if (_history[index, 2] == result && _history[index, 0] == a && _history[index, 1] == b)
                     {
                         line += " (текущий результат)";
@@ -165,23 +164,32 @@ namespace LABA3
                 }
             }
         }
-
-
-
+        
         private void richTextBox2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            // При двойном щелчке на записи в истории, выводим ее значения в соответствующие поля
-            int index = richTextBox2.GetLineFromCharIndex(richTextBox2.SelectionStart) - 1;
-            if (index >= 0 && index < HistorySize && _history[index, 2] != 0)
+            // Получаем номер строки, на которую кликнули два раза
+            int lineIndex = richTextBox2.GetLineFromCharIndex(richTextBox2.SelectionStart);
+
+            // Проверяем, что строка с таким номером существует
+            if (lineIndex >= 0 && lineIndex < richTextBox2.Lines.Length)
             {
-                double a = _history[index, 0];
-                double b = _history[index, 1];
-                double result = _history[index, 2];
-                textBox9.Text = a.ToString();
-                textBox10.Text = b.ToString();
-                textBox11.Text = result.ToString();
+                // Получаем пользовательский атрибут строки, который содержит индекс записи в массиве _history
+                int historyIndex;
+                if (int.TryParse(richTextBox2.Lines[lineIndex].Split('\t')[0], out historyIndex))
+                {
+                    // Получаем данные из массива _history по индексу записи
+                    double a = _history[historyIndex - 1, 0];
+                    double b = _history[historyIndex - 1, 1];
+                    double result = _history[historyIndex - 1, 2];
+
+                    // Выводим данные в поля ввода и вывода
+                    textBox9.Text = a.ToString();
+                    textBox10.Text = b.ToString();
+                    textBox11.Text = result.ToString("0.000");
+                }
             }
         }
+
 
 
         private void textBox8_KeyDown(object sender, KeyEventArgs e)
