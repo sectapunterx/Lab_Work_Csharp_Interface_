@@ -55,7 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -76,7 +75,6 @@
             // 
             this.Lab3.Controls.Add(this.tabPage1);
             this.Lab3.Controls.Add(this.tabPage2);
-            this.Lab3.Controls.Add(this.tabPage3);
             this.Lab3.Controls.Add(this.tabPage4);
             this.Lab3.Location = new System.Drawing.Point(-1, -1);
             this.Lab3.Name = "Lab3";
@@ -334,16 +332,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Введите параметр А:";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(443, 233);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Task3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.textBox11);
@@ -493,8 +481,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
-
-        private System.Windows.Forms.TabPage tabPage3;
 
         private System.Windows.Forms.TabControl Lab3;
         private System.Windows.Forms.TabPage tabPage1;
